@@ -1,3 +1,47 @@
-<p>
-  dishdetail works!
-</p>
+  
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0">
+
+  <div fxFlex="40">
+      <app-card></app-card>
+  </div>
+
+  <div fxFlex="40">
+          <div fxFlex *ngIf="dish">
+              <mat-list fxFlex>
+                <h3>Comments</h3>
+                <mat-list-item *ngFor="let comment of dish.comments">
+                  <p matLine>
+                    <span>{{comment.comment}}</span>
+                  </p>
+                  <p matLine>
+                    <span>{{comment.rating}} Stars</span>
+                  </p>
+                  <p matLine>
+                    <span>-- {{comment.author}} {{comment.date|date}}</span>
+                  </p>
+                </mat-list-item>
+              </mat-list>
+            </div>
+
+            <!--<div class="container" fxLayout="column" >
+                <div fxFlex>
+                    <h3>Comments</h3>
+                </div>
+    
+                 Display the comments 
+                <div  fxLayout="column" fxLayoutGap="10px">
+                      <div *ngFor="let comment of dish.comments">
+                        <p>{{ comment.comment}} <br/>
+                        {{ comment.rating}} Stars <br/>
+                        {{ comment.author }} {{ comment.date | date}}</p>
+                      </div>
+                      <br/>
+                </div>
+            </div>-->
+</div>
