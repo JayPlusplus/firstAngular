@@ -1,6 +1,3 @@
-<p>
-  contact works!
-</p>
 <div class="container"
   fxLayout="column"
   fxLayoutGap="10px">
@@ -48,8 +45,7 @@
         <mat-form-field class="half-width">
           <input matInput formControlName="firstname" placeholder="First Name"
           type="text" required>
-          <mat-error *ngIf="feedbackForm.get('firstname').hasError('required') 
-            && feedbackForm.get('firstname').touched">First name is required
+          <mat-error *ngIf="feedbackForm.get('firstname').hasError('required') && feedbackForm.get('firstname').touched">First name is required
           </mat-error>
         </mat-form-field>
         <mat-form-field class="half-width">
